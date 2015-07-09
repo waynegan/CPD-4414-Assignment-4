@@ -15,9 +15,10 @@ import java.util.logging.Logger;
 public class database{
     public static Connection getConnection() throws SQLException {
 
-        String url = "jdbc:mysql://ipro.lambton.on.ca/inventory";
-        String username = "products";
-        String password = "products";
+         String jdbc = "jdbc:mysql://IPRO/Winter2015";
+            String user = "Winter2015";
+            String pass = "P@ssw0rd";
+            
 
         Connection conn = null;
         try {
@@ -26,7 +27,7 @@ public class database{
             System.out.println("Class Not found  exception" + e.getMessage());
         }
         try {
-            conn = DriverManager.getConnection(url, username, password);
+            conn = DriverManager.getConnection(jdbc, user, pass);
         } catch (SQLException e) {
             System.out.println("SQL Error found " + e.getMessage());
         }
