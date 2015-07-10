@@ -4,16 +4,16 @@
  * and open the template in the editor.
  */
 
-package service;
+package org.netbeans.rest.application.config;
 
 import java.util.Set;
 import javax.ws.rs.core.Application;
 
 /**
  *
- * @author c0645457
+ * @author Amanda Cohoon - c0628569
  */
-@javax.ws.rs.ApplicationPath("webresources")
+@javax.ws.rs.ApplicationPath("")
 public class ApplicationConfig extends Application {
 
     @Override
@@ -30,7 +30,7 @@ public class ApplicationConfig extends Application {
      * If required, comment out calling this method in getClasses().
      */
     private void addRestResourceClasses(Set<Class<?>> resources) {
-        resources.add(service.productDescriptionFacadeREST.class);
+        resources.add(credentals.Product.class);
     }
     
 }
